@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<users xmlns="https://www.w3schools.com"
+xmlns:xsi ="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="https://www.w3schools.com/xml users.xsd">
+    <user>
+        <employee id="1">
+            <fistName>Quy</fistName>
+            <lastName>Nguyen</lastName>
+            <email>q@gmail.com</email>
+            <phone>755611</phone>
+            <age>19</age>
+            <position>Manager</position>
+            <department>FPT</department>
+        </employee>
+    </user>
+    <user>
+        <teacher id="2">
+            <fistName>Quynh</fistName>
+            <lastName>Nguyen</lastName>
+            <email>Q@gmail.com.vn</email>
+            <phone>766555</phone>
+            <age>20</age>
+            <experience>5</experience>
+            <class>T2013E</class>
+        </teacher>
+    </user>
+    <user>
+        <employee id="3">
+            <fistName>Quan</fistName>
+            <lastName>Nguyen</lastName>
+            <email>quan@gmail.com</email>
+            <phone>75561111</phone>
+            <age>19</age>
+            <position>Manager</position>
+            <department>FPT</department>
+        </employee>
+    </user>
+    <user>
+        <teacher id="4">
+            <fistName>Quang</fistName>
+            <lastName>Nguyen</lastName>
+            <email>Quang@gmail.com.vn</email>
+            <phone>76655533</phone>
+            <age>20</age>
+            <experience>5</experience>
+            <class>T2013E</class>
+        </teacher>
+    </user>
+</users>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://www.w3schools.com"
+           xmlns="https://www.w3schools.com"
+           elementFormDefault="qualified">
+    <xs:element name="users">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name = "user" type="user" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:group name="groupname">
+        <xs:sequence>
+            <xs:element name="fistName" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="phone" type="xs:string"/>
+            <xs:element name="age" type="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base = "xs:integer">
+                        <xs:minInclusive value="0"/>
+                        <xs:maxInclusive value="120"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:group>
+    <xs:complexType name="employee">
+        <xs:sequence>
+            <xs:group ref="groupname"/>
+            <xs:element name="position" type="xs:string"/>
+            <xs:element name="department" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="teacher">
+        <xs:sequence>
+            <xs:group ref="groupname"/>
+            <xs:element name="experience" type="xs:integer"/>
+            <xs:element name="class" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="user">
+        <xs:choice>
+            <xs:element name = "employee" type="employee"/>
+            <xs:element name = "teacher" type="teacher"/>
+        </xs:choice>
+    </xs:complexType>
+</xs:schema>
